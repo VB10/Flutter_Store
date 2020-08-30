@@ -2,10 +2,10 @@
 using Entities.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dal.Concrete.EntityFramework.Repository
 {
@@ -13,7 +13,7 @@ namespace Dal.Concrete.EntityFramework.Repository
     {
         public EfProductRepository():base()
         {
-            
+                   
         }
 
         public bool BuyProduct(int userId, int productId, int count)
@@ -43,7 +43,7 @@ namespace Dal.Concrete.EntityFramework.Repository
 
         public Products GetProduct(int userId, int productId)
         {
-            Products product= context.Products.Where(x => x.Id == productId).Include(x => x.ProductPhotos).Include(x => x.SubCategories).Include(x=>x.Categories).FirstOrDefault();
+            Products product= context.Products.Where(x => x.Id == productId).Include(x=>x.ProductPhotos).Include(x=>x.SubCategories).FirstOrDefault();
             return product;
         }
 

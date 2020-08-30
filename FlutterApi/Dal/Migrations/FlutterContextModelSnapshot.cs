@@ -14,6 +14,7 @@ namespace Dal.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("dbo")
                 .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -97,7 +98,7 @@ namespace Dal.Migrations
 
                     b.HasIndex("categoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products","dbo");
                 });
 
             modelBuilder.Entity("Entities.Models.PurchaseHistory", b =>

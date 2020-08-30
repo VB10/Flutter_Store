@@ -17,6 +17,7 @@ namespace Dal.Concrete.EntityFramework.Repository
         public EfGenericRepository()
         {
             context = new FlutterContext();
+            context.ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public T Add(T entity)

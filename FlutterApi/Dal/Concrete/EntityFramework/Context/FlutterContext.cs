@@ -10,8 +10,8 @@ namespace Dal.Concrete.EntityFramework.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer("server=.;database=FlutterStore;trusted_connection=true;");
-         }
+            optionsBuilder.UseLazyLoadingProxies(true).UseSqlServer("server=.;database=FlutterStore;trusted_connection=true;"); 
+        }
         public FlutterContext()
         {
         }
@@ -33,16 +33,16 @@ namespace Dal.Concrete.EntityFramework.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Products>()
-                .HasOne(p => p.Categories)
-                .WithMany(b => b.Products).HasForeignKey(x=>x.categoryId);
+               .HasOne(p => p.Categories)
+               .WithMany(b => b.Products).HasForeignKey(x => x.categoryId);
 
             modelBuilder.Entity<ProductPhotos>()
              .HasOne(p => p.Products)
-             .WithMany(b => b.ProductPhotos).HasForeignKey(x => x.prdocutId);
-            modelBuilder.Entity<SubCategories>()
-         .HasOne(p => p.Products)
-         .WithMany(b => b.SubCategories).HasForeignKey(x => x.prdocutId);
+             .WithMany(b => b.ProductPhotos).HasForeignKey(x => x.productId);
 
+            modelBuilder.Entity<SubCategories>()
+             .HasOne(p => p.Products)
+             .WithMany(b => b.SubCategories).HasForeignKey(x => x.productId);
         }
 
 

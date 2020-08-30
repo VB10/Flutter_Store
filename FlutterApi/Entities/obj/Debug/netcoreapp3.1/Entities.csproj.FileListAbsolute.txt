@@ -1,8 +1,8 @@
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\bin\Debug\netcoreapp3.1\Entities.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache

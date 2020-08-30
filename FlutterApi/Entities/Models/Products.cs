@@ -11,8 +11,6 @@ namespace Entities.Models
     public  class Products
     {
         
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string ProductName { get; set; }
         public string Subtitle { get; set; }
@@ -34,6 +32,6 @@ namespace Entities.Models
 
         public int categoryId { get; set; }
         [ForeignKey("categoryId")]
-        public virtual Categories Categories { get; set; }
+        public virtual  Categories Categories { get; set; }
     }
 }
