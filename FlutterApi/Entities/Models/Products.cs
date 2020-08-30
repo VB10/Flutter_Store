@@ -20,6 +20,7 @@ namespace Entities.Models
         public string Subtitle { get; set; }
         public string Description { get; set; }
         public int TotalItem { get; set; }
+        public int Stock { get; set; }
         public float Stars { get; set; }
         public float Price { get; set; }
         public int DiscountPercent { get; set; }
