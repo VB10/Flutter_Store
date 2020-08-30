@@ -1,4 +1,4 @@
-namespace SiparisTakip.Dal.Concrete.EntityFramework.Context
+namespace Dal.Concrete.EntityFramework.Context
 {
     using Entities.Models;
     using Microsoft.EntityFrameworkCore;
@@ -10,7 +10,7 @@ namespace SiparisTakip.Dal.Concrete.EntityFramework.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer("server=.;database=OnlineSaglikcim;trusted_connection=true;");
+           optionsBuilder.UseSqlServer("server=.;database=FlutterStore;trusted_connection=true;");
          }
         public FlutterContext()
         {

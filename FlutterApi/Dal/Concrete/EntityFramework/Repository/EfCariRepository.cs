@@ -1,23 +1,23 @@
-﻿using SiparisTakip.Dal.Abstract;
-using SiparisTakip.Dal.Concrete.EntityFramework.Context;
-using SiparisTakip.Entittes.Models;
+﻿using Dal.AbstractInterfaces;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SiparisTakip.Dal.Concrete.EntityFramework.Repository
+namespace Dal.Concrete.EntityFramework.Repository
 {
-    public class EfCariRepository : EfGenericRepository<Cari>, ICariRepository
+    public class EfCategoriesRepository : EfGenericRepository<Categories>, ICategoriesRepository
     {
-        public EfCariRepository():base()
+        public EfCategoriesRepository():base()
         {
             
         }
-        public List<Cari> CariHesapEktresi(int cariId)
+
+        public List<Categories> GetCategories()
         {
-            return context.Cari.Where(x => x.CariID == cariId).ToList();
+            throw new NotImplementedException();
         }
     }
 }

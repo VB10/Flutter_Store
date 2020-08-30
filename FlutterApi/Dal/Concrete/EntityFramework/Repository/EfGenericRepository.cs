@@ -1,15 +1,14 @@
-﻿using SiparisTakip.Dal.Abstract;
-using SiparisTakip.Dal.Concrete.EntityFramework.Context;
+﻿using Dal.Abstract;
+using Dal.Concrete.EntityFramework.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SiparisTakip.Dal.Concrete.EntityFramework.Repository
+namespace Dal.Concrete.EntityFramework.Repository
 {
     public class EfGenericRepository<T> : IGenericRepository<T> where T : class
     {
