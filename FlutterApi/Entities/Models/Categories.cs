@@ -8,12 +8,14 @@ namespace Entities.Models
 {
 
     [Table("Categories")]
-    public partial class Categories
+    public  class Categories
     {
         public Categories()
         {
             Products = new HashSet<Products>();
         }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string CategoryName { get; set; }
         public string photoUrl { get; set; }

@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    public interface IStokService:IGenericService<Products>
+    public interface IProductService:IGenericService<Products>
     {
         List<Products> GetMostPopular();
         List<Products> GetMostSold();
         List<Products> GetMostDiscount();
         List<Products> GetDaily();
+        List<Products> GetProductWithCategory(int categoryId);
         List<Products> SearchProduct(string name);
         Products GetProduct(int userId, int productId);
 

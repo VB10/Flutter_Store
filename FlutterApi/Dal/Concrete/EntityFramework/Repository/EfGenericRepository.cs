@@ -41,8 +41,8 @@ namespace Dal.Concrete.EntityFramework.Repository
         public T Get(int id)
         {
             var entity = context.Set<T>().Find(id);
-            context.Entry(entity).State = System.Data.Entity.EntityState.Deleted;
-            context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.Entry(entity).State = EntityState.Deleted;
+            context.Entry(entity).State = EntityState.Modified;
             return entity;
         }
 
@@ -69,7 +69,7 @@ namespace Dal.Concrete.EntityFramework.Repository
 
         public T Update(T entity)
         {
-            context.Set<T>().AddOrUpdate(entity);
+            context.Set<T>().Update(entity);
             context.SaveChanges();
             return entity;
         }

@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Entities.Models
 {
-    [Table("Products")]
-    public class UserFavorites
+    [Table("PurchaseHistory")]
+    public class PurchaseHistory
     {
         public int Id { get; set; }
 

@@ -6,7 +6,7 @@ namespace Dal.Concrete.EntityFramework.Context
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class FlutterContext : DbContext
+    public  class FlutterContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,6 +27,25 @@ namespace Dal.Concrete.EntityFramework.Context
         public virtual DbSet<UserFavorites> UserFavorites { get; set; }
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<UserStars> UserStars { get; set; }
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Products>()
+                .HasOne(p => p.Categories)
+                .WithMany(b => b.Products).HasForeignKey(x=>x.categoryId);
+
+            modelBuilder.Entity<ProductPhotos>()
+             .HasOne(p => p.Products)
+             .WithMany(b => b.ProductPhotos).HasForeignKey(x => x.productId);
+            modelBuilder.Entity<SubCategories>()
+         .HasOne(p => p.Products)
+         .WithMany(b => b.SubCategories).HasForeignKey(x => x.productId);
+
+        }
+
+
 
     }
 }

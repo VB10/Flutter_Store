@@ -2,6 +2,7 @@
 using Entities.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,12 @@ namespace Dal.Concrete.EntityFramework.Repository
         }
 
         public Products GetProduct(int userId, int productId)
+        {
+            Products product= context.Products.Where(x => x.Id == productId).Include(x => x.ProductPhotos).Include(x => x.SubCategories).Include(x=>x.Categories).FirstOrDefault();
+            return product;
+        }
+
+        public List<Products> GetProductWithCategory(int categoryId)
         {
             throw new NotImplementedException();
         }

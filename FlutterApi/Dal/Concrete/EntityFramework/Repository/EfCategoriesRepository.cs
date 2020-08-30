@@ -17,7 +17,7 @@ namespace Dal.Concrete.EntityFramework.Repository
 
         public List<Categories> GetCategories()
         {
-            throw new NotImplementedException();
+            return context.Categories.ToList();
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SiparisTakip.Interfaces
+namespace Interfaces
 {
     public interface IGenericService<T>:IDisposable
     {

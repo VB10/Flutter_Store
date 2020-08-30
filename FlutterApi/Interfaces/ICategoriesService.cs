@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    public interface IStokService:IGenericService<Products>
+    public interface ICategoriesService : IGenericService<Categories>
     {
-        Products GetProduct(int userId,int productId);
+        List<Categories> GetCategories();
 
-        bool BuyProduct(int userId,int productId,int count);
 
     }
 }
