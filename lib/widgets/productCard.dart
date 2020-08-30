@@ -1,7 +1,9 @@
 import 'package:drawTask/models/subCategories.dart';
+import 'package:drawTask/screens/product_detail.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
+  final int productId;
   final String imageUrl;
   final String name;
   final Function onPressed;
@@ -13,6 +15,7 @@ class ProductCard extends StatelessWidget {
       {Key key,
       @required this.imageUrl,
       @required this.name,
+      @required this.productId,
       @required this.onPressed,
       this.subCategory,
       this.subTitle,
@@ -21,67 +24,79 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 100,
-      margin: EdgeInsets.only(bottom: 10),
-      padding: EdgeInsets.all(7),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15), color: Colors.white),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
-              child: Image(
-                  height: 85.0,
-                  width: 85.0,
-                  image: NetworkImage(imageUrl),
-                  fit: BoxFit.cover)),
-          SizedBox(
-            width: 10,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                name,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProductDetail(
+                productId: productId,
               ),
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                width: 200,
-                height: 20,
-                child: ListView.builder(
-                  itemCount: subCategory.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => subCategoryBox(
-                      subCategory[index].name, subCategory[index].colorType),
+            ));
+      },
+      child: Container(
+        width: double.infinity,
+        height: 100,
+        margin: EdgeInsets.only(bottom: 10),
+        padding: EdgeInsets.all(7),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15), color: Colors.white),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image(
+                    height: 85.0,
+                    width: 85.0,
+                    image: NetworkImage(imageUrl),
+                    fit: BoxFit.cover)),
+            SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  name,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                 ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  Text(
-                    subTitle,
-                    style: TextStyle(fontSize: 12, color: Colors.black26),
+                SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  width: 200,
+                  height: 20,
+                  child: ListView.builder(
+                    itemCount: subCategory.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => subCategoryBox(
+                        subCategory[index].name, subCategory[index].colorType),
                   ),
-                  SizedBox(
-                    width: 63,
-                  ),
-                  Text(
-                    "Rp. " + price.toStringAsFixed(3),
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      subTitle,
+                      style: TextStyle(fontSize: 12, color: Colors.black26),
+                    ),
+                    SizedBox(
+                      width: 63,
+                    ),
+                    Text(
+                      "Rp. " + price.toStringAsFixed(3),
+                      style:
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

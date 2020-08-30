@@ -30,6 +30,7 @@ class BestProduct extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 children: [
                   ProductCard(
+                      productId: 1,
                       imageUrl:
                           "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
                       name: "Banana Goreng",
@@ -38,6 +39,7 @@ class BestProduct extends StatelessWidget {
                       price: 2.500,
                       onPressed: null),
                   ProductCard(
+                      productId: 1,
                       imageUrl:
                           "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
                       name: "Banana Goreng",
@@ -46,6 +48,7 @@ class BestProduct extends StatelessWidget {
                       price: 2.500,
                       onPressed: null),
                   ProductCard(
+                      productId: 1,
                       imageUrl:
                           "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
                       name: "Banana Goreng",
@@ -54,6 +57,7 @@ class BestProduct extends StatelessWidget {
                       price: 2.500,
                       onPressed: null),
                   ProductCard(
+                      productId: 1,
                       imageUrl:
                           "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
                       name: "Banana Goreng",

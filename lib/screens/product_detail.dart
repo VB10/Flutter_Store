@@ -3,6 +3,8 @@ import 'package:drawTask/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+enum buttonType { add, remove }
+
 class ProductDetail extends StatefulWidget {
   final int productId;
   const ProductDetail({Key key, @required this.productId}) : super(key: key);
@@ -12,6 +14,7 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
+  int counter = 0;
   double width, height;
   String imageUrl =
       "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1";
@@ -27,7 +30,9 @@ class _ProductDetailState extends State<ProductDetail> {
           preferredSize: const Size.fromHeight(50),
           child: NewAppBar(
             icon1: Icons.chevron_left,
-            func1: () {},
+            func1: () {
+              Navigator.pop(context);
+            },
             icon2: Icons.favorite,
             func2: () {},
           )),
@@ -67,16 +72,16 @@ class _ProductDetailState extends State<ProductDetail> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          addRemoveButtons(Icons.remove),
+          addRemoveButtons(buttonType.remove),
           SizedBox(width: 20),
           Padding(
               padding: EdgeInsets.only(top: 5),
               child: Text(
-                "2",
+                counter.toString(),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               )),
           SizedBox(width: 20),
-          addRemoveButtons(Icons.add),
+          addRemoveButtons(buttonType.add),
           SizedBox(width: 20),
           buyButton()
         ],
@@ -105,7 +110,7 @@ class _ProductDetailState extends State<ProductDetail> {
     );
   }
 
-  Container addRemoveButtons(IconData icon) {
+  Container addRemoveButtons(button) {
     return Container(
       width: width * 0.11,
       height: 40,
@@ -114,9 +119,13 @@ class _ProductDetailState extends State<ProductDetail> {
         color: Colors.black45,
         strokeWidth: 0.7,
         child: IconButton(
-          icon: Icon(icon),
+          icon: Icon(button == buttonType.add ? Icons.add : Icons.remove),
           color: Colors.black45,
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              counter = button == buttonType.add ? counter + 1 : counter - 1;
+            });
+          },
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:drawTask/screens/product_detail.dart';
 import 'package:drawTask/widgets/bestProduct.dart';
 import 'package:drawTask/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -93,8 +94,8 @@ class _HomePageState extends State<HomePage> {
                       : Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SearchPage(
-                              searchText: searchController.text,
+                            builder: (context) => ProductDetail(
+                              productId: 5,
                             ),
                           ));
                 }),

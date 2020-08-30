@@ -1,0 +1,10 @@
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\FlutterApi.exe
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.csprojAssemblyReference.cache
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\staticwebassets\FlutterApi.StaticWebAssets.Manifest.cache
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\staticwebassets\FlutterApi.StaticWebAssets.xml
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.AssemblyInfoInputs.cache
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.AssemblyInfo.cs
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.RazorTargetAssemblyInfo.cache

@@ -4,7 +4,5 @@ import 'package:flutter/material.dart';
 import 'screens/product_detail.dart';
 
 void main() => runApp(MaterialApp(
-      home: ProductDetail(
-        productId: 1,
-      ),
+      home: HomePage(),
     ));
