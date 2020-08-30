@@ -38,10 +38,10 @@ namespace Dal.Concrete.EntityFramework.Context
 
             modelBuilder.Entity<ProductPhotos>()
              .HasOne(p => p.Products)
-             .WithMany(b => b.ProductPhotos).HasForeignKey(x => x.productId);
+             .WithMany(b => b.ProductPhotos).HasForeignKey(x => x.prdocutId);
             modelBuilder.Entity<SubCategories>()
          .HasOne(p => p.Products)
-         .WithMany(b => b.SubCategories).HasForeignKey(x => x.productId);
+         .WithMany(b => b.SubCategories).HasForeignKey(x => x.prdocutId);
 
         }
 

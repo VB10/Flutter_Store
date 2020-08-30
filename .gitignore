@@ -2,3 +2,14 @@
 *.lock
 FlutterApi/.vs/FlutterApi/v16/Server/sqlite3/storage.ide
 FlutterApi/.vs/FlutterApi/v16/Server/sqlite3/storage.ide-wal
+FlutterApi/FlutterApi/bin/Debug/netcoreapp3.1/Dal.pdb
+FlutterApi/FlutterApi/bin/Debug/netcoreapp3.1/Dal.dll
+FlutterApi/FlutterApi/obj/Debug/netcoreapp3.1/FlutterApi.csprojAssemblyReference.cache
+FlutterApi/Dal/obj/Debug/netcoreapp3.1/Dal.pdb
+FlutterApi/Dal/obj/Debug/netcoreapp3.1/Dal.dll
+FlutterApi/Dal/obj/Debug/netcoreapp3.1/Dal.csprojAssemblyReference.cache
+FlutterApi/Dal/bin/Debug/netcoreapp3.1/Dal.pdb
+FlutterApi/Dal/bin/Debug/netcoreapp3.1/Dal.dll
+FlutterApi/Business/bin/Debug/netcoreapp3.1/Dal.pdb
+FlutterApi/Business/bin/Debug/netcoreapp3.1/Dal.dll
+FlutterApi/Business/obj/Debug/netcoreapp3.1/Business.csprojAssemblyReference.cache

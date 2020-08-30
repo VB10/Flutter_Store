@@ -14,8 +14,8 @@ namespace Entities.Models
         public int Id { get; set; }
         public string SubCategoryName { get; set; }
         public int colorType { get; set; }
-        public int productId { get; set; }
-        [ForeignKey("productId")]
+        public int prdocutId { get; set; }
+        [ForeignKey("prdocutId")]
         public virtual Products Products { get; set; }
     }
 }
