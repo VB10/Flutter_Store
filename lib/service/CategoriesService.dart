@@ -7,9 +7,7 @@ import 'package:http/http.dart' as http;
 
 class CategoriesService extends IFoodService {
   FutureOr<dynamic> getData(String path) async {
-    print(1);
     final response = await http.get(baseUrl + path);
-    print(2);
     switch (response.statusCode) {
       case HttpStatus.ok:
         final jsonBody = jsonDecode(response.body);
