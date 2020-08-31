@@ -15,15 +15,15 @@ namespace FlutterApi.Controllers
     [ApiController]
     public class ProductController : Controller
     {
-        IProductService products;
+        IProductService productContext;
         public ProductController(IProductService product)
         {
-            this.products = product;
+            this.productContext = product;
         }
         [HttpGet("{userId}/{productId}")]
         public IActionResult GetProduct(int userId,int productId)
         {
-            var product = products.GetProduct(userId, productId);
+            var product = productContext.GetProduct(userId, productId);
             return Ok(product);
         }
     }

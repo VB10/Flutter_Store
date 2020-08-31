@@ -1,5 +1,6 @@
 ﻿using Dal.AbstractInterfaces;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Dal.Concrete.EntityFramework.Repository
 
         public List<Categories> GetCategories()
         {
-            return context.Categories.ToList();
+            return context.Categories.Include(x=>x.Products).ToList();
         }
     }
 }

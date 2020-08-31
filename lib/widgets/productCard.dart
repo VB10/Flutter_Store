@@ -71,7 +71,8 @@ class ProductCard extends StatelessWidget {
                     itemCount: subCategory.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) => subCategoryBox(
-                        subCategory[index].name, subCategory[index].colorType),
+                        subCategory[index].subCategoryName,
+                        subCategory[index].colorType),
                   ),
                 ),
                 SizedBox(

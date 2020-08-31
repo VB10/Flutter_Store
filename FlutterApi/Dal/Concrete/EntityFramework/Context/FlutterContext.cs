@@ -10,7 +10,8 @@ namespace Dal.Concrete.EntityFramework.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLazyLoadingProxies(true).UseSqlServer("server=.;database=FlutterStore;trusted_connection=true;"); 
+            optionsBuilder.UseLazyLoadingProxies(true).UseSqlServer(@"Data Source=hasansahin.net\MSSQLSERVER2016;Initial Catalog=hasansa1_flutter;Integrated Security=False;User ID=hasansa1_flutter;Password=hasan123*;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); 
+            //optionsBuilder.UseLazyLoadingProxies(true).UseSqlServer("server=.;database=FlutterStore;trusted_connection=true;"); 
         }
         public FlutterContext()
         {
@@ -35,6 +36,7 @@ namespace Dal.Concrete.EntityFramework.Context
             modelBuilder.Entity<Products>()
                .HasOne(p => p.Categories)
                .WithMany(b => b.Products).HasForeignKey(x => x.categoryId);
+
 
             modelBuilder.Entity<ProductPhotos>()
              .HasOne(p => p.Products)

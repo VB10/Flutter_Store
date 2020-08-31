@@ -67,7 +67,6 @@ namespace FlutterApi
                 Formatting = Newtonsoft.Json.Formatting.Indented,
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

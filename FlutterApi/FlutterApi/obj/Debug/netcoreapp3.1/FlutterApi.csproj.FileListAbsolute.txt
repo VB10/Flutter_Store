@@ -7,6 +7,9 @@ C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\ne
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\FlutterApi.runtimeconfig.dev.json
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\FlutterApi.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\FlutterApi.pdb
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -16,8 +19,10 @@ C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\ne
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -27,6 +32,7 @@ C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\ne
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
@@ -41,6 +47,7 @@ C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\ne
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -121,17 +128,10 @@ C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\ne
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.csprojAssemblyReference.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\staticwebassets\FlutterApi.StaticWebAssets.Manifest.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\staticwebassets\FlutterApi.StaticWebAssets.xml
+C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.AssemblyInfoInputs.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.AssemblyInfo.cs
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.RazorTargetAssemblyInfo.cache
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.csproj.CopyComplete
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.dll
 C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.pdb
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\obj\Debug\netcoreapp3.1\FlutterApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Castle.Core.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\GhoSt\Desktop\projeler\Flutter_Store\FlutterApi\FlutterApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

@@ -1,30 +1,35 @@
+import 'package:drawTask/models/Categories.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard({Key key}) : super(key: key);
+  final List<Categories> categories;
+
+  const CategoryCard({Key key, @required this.categories}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        categoryCardItem(
-            "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
-            "Sweet",
-            12),
-        categoryCardItem(
-            "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
-            "Sweet",
-            12),
-        categoryCardItem(
-            "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1",
-            "Sweet",
-            12),
-      ],
+    return categories.length == 0
+        ? buildPaddingProgress(context)
+        : ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: categories.length,
+            itemBuilder: (context, index) =>
+                categoryCardItem(categories[index]),
+          );
+  }
+
+  Widget buildPaddingProgress(context) {
+    return Container(
+      child: Padding(
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.12),
+        child: CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+        ),
+      ),
     );
   }
 
-  Padding categoryCardItem(imageUrl, categoryName, itemCount) {
+  Padding categoryCardItem(Categories category) {
     return Padding(
       padding: const EdgeInsets.only(right: 15.0),
       child: Stack(
@@ -34,16 +39,16 @@ class CategoryCard extends StatelessWidget {
               child: Image(
                   height: 120.0,
                   width: 130.0,
-                  image: NetworkImage(imageUrl),
+                  image: NetworkImage(category.photoUrl),
                   fit: BoxFit.cover)),
           Positioned(
               left: 4,
               bottom: 2,
               child: Row(
                 children: [
-                  Text(categoryName + " - ",
+                  Text(category.categoryName + " - ",
                       style: TextStyle(color: Colors.black54)),
-                  Text(itemCount.toString() + " Item",
+                  Text(category.totalItem.toString() + " Item",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold)),
                 ],
