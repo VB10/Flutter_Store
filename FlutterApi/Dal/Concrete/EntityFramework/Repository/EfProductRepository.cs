@@ -33,7 +33,7 @@ namespace Dal.Concrete.EntityFramework.Repository
 
         public List<Products> GetMostPopular()
         {
-            throw new NotImplementedException();
+            return context.Products.Include(x=>x.SubCategories).Take(5).ToList();
         }
 
         public List<Products> GetMostSold()

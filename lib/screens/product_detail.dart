@@ -1,7 +1,10 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:drawTask/models/Product.dart';
+import 'package:drawTask/service/ProductService.dart';
 import 'package:drawTask/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 enum buttonType { add, remove }
 
@@ -10,14 +13,43 @@ class ProductDetail extends StatefulWidget {
   const ProductDetail({Key key, @required this.productId}) : super(key: key);
 
   @override
-  _ProductDetailState createState() => _ProductDetailState();
+  _ProductDetailState createState() => _ProductDetailState(productId);
 }
 
 class _ProductDetailState extends State<ProductDetail> {
-  int counter = 0;
   double width, height;
-  String imageUrl =
-      "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/how-to-make-donuts-20.jpg?resize=640%2C360&ssl=1";
+  int counter = 0;
+  bool isLoading = false;
+  Product product;
+  final int id;
+
+  _ProductDetailState(this.id);
+
+  @override
+  void initState() {
+    super.initState();
+    getViewDatas();
+  }
+
+  Future<void> getViewDatas() async {
+    changeLoading();
+    product =
+        await ProductService().getData("Product/GetProduct/1/" + id.toString());
+    changeLoading();
+    Fluttertoast.showToast(
+        msg: "Ürün Getirildi",
+        toastLength: Toast.LENGTH_SHORT,
+        timeInSecForIosWeb: 2,
+        webPosition: "bottom",
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.red[300]);
+  }
+
+  void changeLoading() {
+    setState(() {
+      isLoading = !isLoading;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +58,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
-          child: NewAppBar(
-            icon1: Icons.chevron_left,
-            func1: () {
-              Navigator.pop(context);
-            },
-            icon2: Icons.favorite,
-            func2: () {},
-          )),
+      appBar: appBar(context),
       body: SafeArea(
           child: Container(
         padding: EdgeInsets.all(5),
@@ -43,35 +66,49 @@ class _ProductDetailState extends State<ProductDetail> {
         height: height,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: width,
-              height: height * 0.5,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.all(15),
-                children: [
-                  bigProductPhoto(imageUrl),
-                  bigProductPhoto(imageUrl),
-                  bigProductPhoto(imageUrl),
-                ],
-              ),
-            ),
-            bottomCard(),
-            bottomCardBuyContainer()
-          ],
+          children: product == null
+              ? [buildPaddingProgress(context)]
+              : [listBuilder(context), bottomCard, bottomCardBuyContainer],
         ),
       )),
     );
   }
 
-  Container bottomCardBuyContainer() {
+  PreferredSize appBar(BuildContext context) {
+    return PreferredSize(
+        preferredSize: const Size.fromHeight(50),
+        child: NewAppBar(
+          icon1: Icons.chevron_left,
+          func1: () {
+            Navigator.pop(context);
+          },
+          icon2: Icons.favorite,
+          func2: () {},
+        ));
+  }
+
+  Container listBuilder(BuildContext context) {
+    return Container(
+      width: width,
+      height: height * 0.5,
+      child: ListView.builder(
+        itemCount: product.productPhotos?.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) =>
+            bigProductPhoto(product.productPhotos[index].photoUrl),
+      ),
+    );
+  }
+
+  Container get bottomCardBuyContainer {
     return Container(
       height: height * 0.07,
+      margin: EdgeInsets.only(top: 2),
       padding: EdgeInsets.only(left: width * 0.1),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(width: 20),
           addRemoveButtons(buttonType.remove),
           SizedBox(width: 20),
           Padding(
@@ -102,7 +139,7 @@ class _ProductDetailState extends State<ProductDetail> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(
-          "Gas, Lanjutkan",
+          "Hemen Sipariş Ver",
           style: TextStyle(fontSize: 15.0),
         ),
       ),
@@ -131,7 +168,7 @@ class _ProductDetailState extends State<ProductDetail> {
     );
   }
 
-  Container bottomCard() {
+  Container get bottomCard {
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40, top: 10),
       height: height * 0.30,
@@ -140,38 +177,36 @@ class _ProductDetailState extends State<ProductDetail> {
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Ice Creamy",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Rp 12.000",
-                    style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-              Spacer(),
-              starBar(4)
-            ],
+            children: [nameAndMoneyContainer, Spacer(), starBar(product.stars)],
           ),
           Container(
-              padding: EdgeInsets.only(top: height * 0.04),
+              padding: EdgeInsets.only(top: height * 0.02),
               child: Text(
-                "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+                product.description,
                 style: TextStyle(color: Colors.black45),
               )),
         ],
       ),
+    );
+  }
+
+  Column get nameAndMoneyContainer {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          product.productName,
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          "Rp " + product.price.toStringAsFixed(2),
+          style: TextStyle(
+              color: Colors.green, fontSize: 14, fontWeight: FontWeight.bold),
+        )
+      ],
     );
   }
 

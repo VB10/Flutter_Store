@@ -26,5 +26,11 @@ namespace FlutterApi.Controllers
             var product = productContext.GetProduct(userId, productId);
             return Ok(product);
         }
+        [HttpGet("")]
+        public IActionResult GetMostPopular()
+        {
+            var product = productContext.GetMostPopular();
+            return Ok(product);
+        }
     }
 }

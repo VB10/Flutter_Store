@@ -6,10 +6,11 @@ class Product {
   String productName;
   String subtitle;
   String description;
+  String defaultPhoto;
   int totalItem;
   int stock;
-  int stars;
-  int price;
+  double stars;
+  double price;
   int discountPercent;
   bool isUserFavorite;
   int userStarCount;
@@ -21,6 +22,7 @@ class Product {
       this.categories,
       this.id,
       this.productName,
+      this.defaultPhoto,
       this.subtitle,
       this.description,
       this.totalItem,
@@ -49,6 +51,7 @@ class Product {
     id = json['id'];
     productName = json['productName'];
     subtitle = json['subtitle'];
+    defaultPhoto = json['defaultPhoto'];
     description = json['description'];
     totalItem = json['totalItem'];
     stock = json['stock'];
@@ -74,6 +77,7 @@ class Product {
     data['id'] = this.id;
     data['productName'] = this.productName;
     data['subtitle'] = this.subtitle;
+    data['defaultPhoto'] = this.defaultPhoto;
     data['description'] = this.description;
     data['totalItem'] = this.totalItem;
     data['stock'] = this.stock;
