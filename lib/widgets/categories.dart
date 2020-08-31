@@ -1,4 +1,5 @@
 import 'package:drawTask/models/Categories.dart';
+import 'package:drawTask/widgets/paddingProgress.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -18,43 +19,40 @@ class CategoryCard extends StatelessWidget {
           );
   }
 
-  Widget buildPaddingProgress(context) {
-    return Container(
-      child: Padding(
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.12),
-        child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-        ),
-      ),
-    );
-  }
-
   Padding categoryCardItem(Categories category) {
     return Padding(
       padding: const EdgeInsets.only(right: 15.0),
       child: Stack(
         children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(25.0),
-              child: Image(
-                  height: 120.0,
-                  width: 130.0,
-                  image: NetworkImage(category.photoUrl),
-                  fit: BoxFit.cover)),
-          Positioned(
-              left: 4,
-              bottom: 2,
-              child: Row(
-                children: [
-                  Text(category.categoryName + " - ",
-                      style: TextStyle(color: Colors.black54)),
-                  Text(category.totalItem.toString() + " Item",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                ],
-              )),
+          categoryPhoto(category),
+          categoryText(category),
         ],
       ),
     );
+  }
+
+  ClipRRect categoryPhoto(Categories category) {
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(25.0),
+        child: Image(
+            height: 120.0,
+            width: 130.0,
+            image: NetworkImage(category.photoUrl),
+            fit: BoxFit.cover));
+  }
+
+  Positioned categoryText(Categories category) {
+    return Positioned(
+        left: 4,
+        bottom: 2,
+        child: Row(
+          children: [
+            Text(category.categoryName + " - ",
+                style: TextStyle(color: Colors.black54)),
+            Text(category.totalItem.toString() + " Item",
+                style: TextStyle(
+                    color: Colors.black, fontWeight: FontWeight.bold)),
+          ],
+        ));
   }
 }

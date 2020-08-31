@@ -35,7 +35,7 @@ namespace SiparisTakip.Bll
 
         public List<Products> GetMostPopular()
         {
-            throw new NotImplementedException();
+            return productRepository.GetMostPopular();
         }
 
         public List<Products> GetMostSold()

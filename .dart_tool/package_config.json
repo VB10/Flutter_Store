@@ -74,6 +74,18 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/tools/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///C:/Users/GhoSt/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/fluttertoast-7.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/GhoSt/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/http-0.12.2",
       "packageUri": "lib/",
@@ -182,7 +194,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-08-31T16:19:08.770924Z",
+  "generated": "2020-08-31T23:37:45.748052Z",
   "generator": "pub",
   "generatorVersion": "2.10.0-7.2.beta"
 }
