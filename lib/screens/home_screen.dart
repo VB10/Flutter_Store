@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> getViewDatas() async {
     changeLoading();
-    categories = await CategoriesService().getData("Categories/GetAll2");
+    categories = await CategoriesService().getData("Categories/GetAll");
     products = await ProductService().getData("Product/GetMostPopular");
     changeLoading();
     Fluttertoast.showToast(

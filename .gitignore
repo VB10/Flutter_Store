@@ -88,3 +88,9 @@ build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin
 .dart_tool/flutter_build/b9a81b86e755a0082ee33a4b7b6bc573/.filecache
 build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill
 build/app/outputs/flutter-apk/app.apk.sha1
+FlutterApi/.vs/FlutterApi/v16/.suo
+FlutterApi/Business/obj/Debug/netcoreapp3.1/Business.csprojAssemblyReference.cache
+FlutterApi/Dal/obj/Debug/netcoreapp3.1/Dal.csprojAssemblyReference.cache
+FlutterApi/FlutterApi/obj/Debug/netcoreapp3.1/FlutterApi.csprojAssemblyReference.cache
+FlutterApi/Interfaces/obj/Debug/netcoreapp3.1/Interfaces.csprojAssemblyReference.cache
+FlutterApi/.vs/FlutterApi/v16/Server/sqlite3/storage.ide-wal
