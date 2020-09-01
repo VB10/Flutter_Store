@@ -1,6 +1,7 @@
 
 *.lock
 build
+FlutterApi/FlutterApi/bin
 FlutterApi/.vs/FlutterApi/v16/Server/sqlite3/storage.ide
 FlutterApi/.vs/FlutterApi/v16/Server/sqlite3/storage.ide-wal
 FlutterApi/FlutterApi/bin/Debug/netcoreapp3.1/Dal.pdb
