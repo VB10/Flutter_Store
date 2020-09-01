@@ -77,3 +77,14 @@ build/fluttertoast/intermediates/manifest_merge_blame_file/debug/manifest-merger
 build/fluttertoast/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt
 build/fluttertoast/intermediates/symbols/debug/R.txt
 build/fluttertoast/outputs/logs/manifest-merger-debug-report.txt
+.flutter-plugins-dependencies
+build/app/outputs/flutter-apk/app.apk
+build/app/outputs/flutter-apk/app-debug.apk
+build/app/outputs/apk/debug/app-debug.apk
+build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin
+build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin
+.dart_tool/flutter_build/b9a81b86e755a0082ee33a4b7b6bc573/app.dill
+.dart_tool/flutter_build/b9a81b86e755a0082ee33a4b7b6bc573/.filecache
+build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill
+build/app/outputs/flutter-apk/app.apk.sha1
